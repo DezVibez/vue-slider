@@ -51,6 +51,13 @@ const root = new Vue({
         ]
         
     },
-    methods: ""
-})
+    methods: {
+        previousButton() {
+            this.currentIndex++;
+            },
+        nextButton() {
+            this.currentIndex--;},
+        }
+    }
+)
 
