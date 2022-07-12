@@ -1,6 +1,12 @@
 
-#gallery {
+
+
+.img-target {
     display: none;
+}
+
+.active {
+    display: block;
 }
 
 img{
@@ -8,13 +14,10 @@ img{
 }
 
 #img-container {
+
     
-    height: 400px;
+    height: 540px;
     width: 700px;
     margin: 0 auto;
-}
-
-.active {
-    display: block;
 }
 

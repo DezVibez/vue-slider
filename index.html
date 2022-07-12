@@ -31,11 +31,20 @@
                 <div> 
                     <i class="bi bi-arrow-left-circle-fill me-3" ></i>
                 </div>
-                <div id="gallery d-block">
-                    <div  v-for = "(image, index) in images" id="img-target" :class= "{'active' : currentIndex === index}" >
-                        <h3 class="text-center">{{image.title}}</h3> 
-                        <img :src=image.url :alt="image.title" class="text-center img-fluid">
+                <div id="gallery">
+                    <div class="img-target mt-3" :class= "{'active' : currentIndex === index}" v-for = "(image, index) in images"  >
+                        
+
+                        <!--Titolo img-->
+                        <div><h3 class="text-center">{{image.title}}</h3> </div>
+
+                        <!--Src img-->
+                        <img :src= "image.url" :alt="image.title" class="text-center img-fluid">
+                        
+                        <!--Descrizione-->
+                        
                         <p>{{image.description}}</p>
+                        
                     </div>
                 </div>
                 <div> 
