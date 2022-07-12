@@ -39,20 +39,28 @@
                         <div><h3 class="text-center">{{image.title}}</h3> </div>
 
                         <!--Src img-->
-                        <img :src= "image.url" :alt="image.title" class="text-center img-fluid">
+                        <img :src= "image.url" :alt="image.title" class="img-fluid">
                         
                         <!--Descrizione-->
                         
                         <p>{{image.description}}</p>
                         
                     </div>
+
                 </div>
                 <div v-on:click = "nextButton"> 
                     <i class="bi bi-arrow-right-circle-fill ms-3"></i>
                 </div>
+
+                
                     
                 
             </div>
+
+            <div id="thumbnail" class="d-flex justify-content-between">
+                <img v-for = "(image, index) in images" :src= "image.url" :alt="image.title" :class= "{'scaleup' : currentIndex === index}" >
+            </div>
+
 
 
         </div>
