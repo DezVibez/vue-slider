@@ -52,12 +52,18 @@ const root = new Vue({
         
     },
     methods: {
-        previousButton() {
-            this.currentIndex++;
-            },
         nextButton() {
-            this.currentIndex--;},
-        }
+            this.currentIndex++;
+            if(this.currentIndex > 4)
+            {this.currentIndex = 0}
+            },
+        previousButton() {
+            this.currentIndex--;
+            if(this.currentIndex < 0)
+            {this.currentIndex = 4}
+            },
     }
+
+}
 )
 

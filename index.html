@@ -28,11 +28,11 @@
             <div class=  "align-items-center mt-3 d-flex" id="img-container">
                     
                         
-                <div @click ="previousButton"> 
+                <div v-on:click ="previousButton"> 
                     <i class="bi bi-arrow-left-circle-fill me-3"></i>
                 </div>
                 <div id="gallery">
-                    <div class="img-target mt-3" :class= "{'active' : currentIndex === index}" v-for = "(image, index) in images"  >
+                    <div v-for = "(image, index) in images" class="img-target mt-3" :class= "{'active' : currentIndex === index}"  >
                         
 
                         <!--Titolo img-->
@@ -47,7 +47,7 @@
                         
                     </div>
                 </div>
-                <div @click = "nextButton"> 
+                <div v-on:click = "nextButton"> 
                     <i class="bi bi-arrow-right-circle-fill ms-3"></i>
                 </div>
                     
