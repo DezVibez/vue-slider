@@ -1,8 +1,20 @@
+/*Consegna:
+Partendo dal markup della versione svolta in js plain, rifare lo slider ma questa volta usando Vue.
+Le caratteristiche minime richieste sono:
+Immagine grande visibile quando attiva
+Lista di Thumbnails in basso
+Anche nelle thumbnails dobbiamo avere una classe active corrispondente all'immagine attiva in quel momento (lo stile è a vostra discrezione)
+Al click sulle freccette l'immagine principale deve cambiare (e la thumbnail corrispondente deve avere la classe active con conseguente effetto visivo)
+Implementare il ciclo infinito: se sono sulla prima immagine e clicco prev, devo ricominciare dall'ultima. Se sono sull'ultima e clicco next, devo ripartire dalla prima. */
+
+Vue.config.devtools = true;
+
 console.log("Vue js ok", Vue)
 
 const root = new Vue({
     el: "#root",
     data: { 
+        currentIndex: 0,
         images:[
             {
               url: 'http://www.viaggiareonline.it/wp-content/uploads/2014/11/sweden_148857365.jpg',
@@ -39,6 +51,6 @@ const root = new Vue({
         ]
         
     },
-    methods:""
+    methods: ""
 })
 

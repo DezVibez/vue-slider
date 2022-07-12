@@ -24,9 +24,29 @@
 <body>
 
     <div id="root">
+        <div class="container">
+            <div class=  "align-items-center mt-3 d-flex" id="img-container">
+                    
+                        
+                <div> 
+                    <i class="bi bi-arrow-left-circle-fill me-3" ></i>
+                </div>
+                <div id="gallery d-block">
+                    <div  v-for = "(image, index) in images" id="img-target" :class= "{'active' : currentIndex === index}" >
+                        <h3 class="text-center">{{image.title}}</h3> 
+                        <img :src=image.url :alt="image.title" class="text-center img-fluid">
+                        <p>{{image.description}}</p>
+                    </div>
+                </div>
+                <div> 
+                    <i class="bi bi-arrow-right-circle-fill ms-3"></i>
+                </div>
+                    
+                
+            </div>
 
 
-        
+        </div>
     </div>
     
     

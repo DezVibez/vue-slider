@@ -1,0 +1,20 @@
+
+#gallery {
+    display: none;
+}
+
+img{
+    object-fit: cover;
+}
+
+#img-container {
+    
+    height: 400px;
+    width: 700px;
+    margin: 0 auto;
+}
+
+.active {
+    display: block;
+}
+
